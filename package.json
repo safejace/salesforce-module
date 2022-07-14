@@ -1,0 +1,46 @@
+{
+  "name": "@nuxtjs/salesforce",
+  "version": "1.0.0",
+  "license": "MIT",
+  "type": "module",
+  "repository": "nuxt-community/salesforce-module",
+  "description": "Salesforce integration for Nuxt",
+  "keywords": [
+    "nuxt",
+    "module",
+    "nuxt-module",
+    "salesforce",
+    "crm"
+  ],
+  "author": {
+    "name": "Jace Bennest <jace.bennest@safe.com>",
+    "url": "https://github.com/safejace"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/module.mjs",
+      "require": "./dist/module.cjs"
+    }
+  },
+  "main": "./dist/module.cjs",
+  "types": "./dist/types.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "prepack": "nuxt-module-build",
+    "dev": "nuxi dev playground",
+    "dev:build": "nuxi build playground",
+    "dev:prepare": "nuxt-module-build --stub && nuxi prepare playground"
+  },
+  "dependencies": {
+    "@nuxt/kit": "^3.0.0-rc.4",
+    "@salesforce/core": "^2.37.1"
+  },
+  "devDependencies": {
+    "@nuxt/module-builder": "latest",
+    "@nuxtjs/eslint-config-typescript": "latest",
+    "eslint": "latest",
+    "nuxt": "^3.0.0-rc.4"
+  }
+}
