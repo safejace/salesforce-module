@@ -1,6 +1,6 @@
 {
   "name": "@safejace/salesforce",
-  "version": "0.0.1",
+  "version": "0.0.0-development",
   "license": "MIT",
   "type": "module",
   "repository": "safejace/salesforce-module",
