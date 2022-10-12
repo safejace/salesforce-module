@@ -1,10 +1,5 @@
 export default defineNuxtConfig({
-  app: {
-    head: {
-      script: [{ src: 'https://unpkg.com/tailwindcss-jit-cdn' }],
-    },
-  },
-  modules: ['@nuxtjs/salesforce', '@pinia/nuxt'],
+  modules: ['@safejace/salesforce'],
   runtimeConfig: {
     public: {
       salesforce: {

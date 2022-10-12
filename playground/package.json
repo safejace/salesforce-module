@@ -6,8 +6,7 @@
     "start": "nuxi start"
   },
   "dependencies": {
-    "@nuxtjs/salesforce": "link:.",
-    "@pinia/nuxt": "^0.4.3",
+    "@safejace/salesforce": "link:.",
     "nuxt": "^3.0.0-rc.11"
   }
 }

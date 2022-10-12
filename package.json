@@ -57,6 +57,6 @@
     "vue": "^3.2.40"
   },
   "resolutions": {
-    "@nuxtjs/salesforce": "link:."
+    "@safejace/salesforce": "link:."
   }
 }
