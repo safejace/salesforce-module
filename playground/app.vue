@@ -2,15 +2,14 @@
 const { $salesforce } = useNuxtApp()
 const token = await $salesforce.fetchRefreshToken()
 $salesforce.setToken(token)
-const records = await useWebinars()
+const accounts = await useFetchAccounts()
 </script>
 
 <template>
   <div>
     {{ $salesforce }}
-
     <pre>
-      {{ records }}
+      {{ accounts }}
     </pre>
   </div>
 </template>

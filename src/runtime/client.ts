@@ -22,12 +22,12 @@ export interface SalesforceConfiguration {
   accessToken?: string
 }
 
-export function getQuery(query: string) {
+export function getQuery (query: string) {
   const soql = query.replace(/\s+/g, '+')
   return `?q=${soql}`
 }
 
-export async function checkRefreshToken(config: SalesforceConfiguration) {
+export async function checkRefreshToken (config: SalesforceConfiguration) {
   const params = {
     grant_type: config.grantType,
     client_id: config.oauth?.clientId,
@@ -46,7 +46,7 @@ export async function checkRefreshToken(config: SalesforceConfiguration) {
   return response.access_token
 }
 
-export function createClient(config: SalesforceConfiguration) {
+export function createClient (config: SalesforceConfiguration) {
   const { accountId, accessToken } = config
 
   const fetchOptions: RequestInit = {
@@ -58,7 +58,7 @@ export function createClient(config: SalesforceConfiguration) {
             Authorization: `Bearer ${accessToken}`,
           }
         : {}),
-      Accept: 'application/json'
+      Accept: 'application/json',
     },
   }
 
@@ -70,7 +70,7 @@ export function createClient(config: SalesforceConfiguration) {
     /**
      * Perform a fetch using SOQL syntax.
      */
-    async fetch<T = unknown>(query: string, _params?: Record<string, any>) {
+    async fetch<T = unknown> (query: string, _params?: Record<string, any>) {
       const qs = getQuery(query)
 
       const host = apiHost
@@ -78,7 +78,7 @@ export function createClient(config: SalesforceConfiguration) {
 
       const result = await $fetch<{ result: T }>(
         `${urlBase}${qs}`,
-        fetchOptions
+        fetchOptions,
       )
       return result
     },
