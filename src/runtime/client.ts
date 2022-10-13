@@ -58,8 +58,7 @@ export function createClient(config: SalesforceConfiguration) {
             Authorization: `Bearer ${accessToken}`,
           }
         : {}),
-      Accept: 'application/json',
-      ...(process.server ? { 'accept-encoding': 'gzip, deflate' } : {}),
+      Accept: 'application/json'
     },
   }
 
