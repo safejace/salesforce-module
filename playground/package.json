@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "dev": "nuxi dev",
+    "build": "nuxi build",
+    "start": "nuxi start"
+  },
+  "dependencies": {
+    "@safejace/salesforce": "link:.",
+    "nuxt": "^3.0.0-rc.11"
+  }
+}
